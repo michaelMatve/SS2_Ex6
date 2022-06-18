@@ -13,13 +13,13 @@ TEST_CASE("good inputs"){
         CHECK_NOTHROW(my_leg.top_lead(5));
         CHECK_NOTHROW(my_leg.numeber_more_score());
 
-        // for(ulong i=0 ; i < 20 ; i++)
-        // {
-        //     CHECK_GT(my_leg.team_longest_lose(i)+my_leg.team_longest_win(i),0);
-        // }
+        for(ulong i=0 ; i < 20 ; i++)
+        {
+            CHECK_GT(my_leg.team_longest_lose(i)+my_leg.team_longest_win(i),0);
+        }
 
-        // CHECK_GT(my_leg.longest_lose(),0);
-        // CHECK_GT(my_leg.longest_win(),0);
+        CHECK_GT(my_leg.longest_lose(),0);
+        CHECK_GT(my_leg.longest_win(),0);
 
         std::vector<michLeag::Team> bestfive = my_leg.top_lead(5);
         std::vector<michLeag::Team> allteam = my_leg.results();

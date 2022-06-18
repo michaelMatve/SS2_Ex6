@@ -16,9 +16,6 @@ OBJECTS=$(subst sources/,objects/,$(subst .cpp,.o,$(SOURCES)))
 
 run: test
 
-main:  $(OBJECTS)
-	$(CXX) $(CXXFLAGS) $^ -o $@
-
 test: TestCounter.o Test.o $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
